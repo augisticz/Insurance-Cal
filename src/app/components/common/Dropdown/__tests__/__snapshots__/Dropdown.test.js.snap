@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown Component renders correctly 1`] = `
+<select
+  className="form-select selection"
+  onChange={[Function]}
+  value=""
+>
+  <option
+    value=""
+  >
+    กรุณาเลือก
+  </option>
+  <option
+    value="MALE"
+  >
+    ชาย
+  </option>
+  <option
+    value="FEMALE"
+  >
+    หญิง
+  </option>
+</select>
+`;

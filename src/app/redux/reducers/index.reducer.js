@@ -2,7 +2,7 @@ import ansurance from './ansurance.reducer';
 import {combineReducers} from 'redux';
 
 const appReducers = combineReducers({
-  ansurance,
+  ansurance
 });
 
 export default appReducers;

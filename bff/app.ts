@@ -1,8 +1,7 @@
 import express, { Application, NextFunction, Request, Response } from 'express'
 const app: Application = express()
-const axios = require('axios')
 const port = 3001
-const isTrue: boolean = true;
+const isTrue = true;
 const bodyParser = require('body-parser');
 
 app.use(function (req: Request, res: Response, next: NextFunction) {
@@ -42,6 +41,7 @@ app.post('/getProduct', (req: Request, res: Response) => {
     const result = req.body.calType === 'calType1' ? calWithType1 : calWithType2;
     
     res.json({
+      ...req.body,
       baseSumAssured: result
     })
   } catch (error) {

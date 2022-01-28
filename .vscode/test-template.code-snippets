@@ -1,0 +1,23 @@
+{
+	"Template Test Component": {
+		"scope": "javascript",
+		"prefix": "ttc",
+		"body": [
+			"import ${TM_FILENAME/\\..+/$1/} from '../${TM_FILENAME/\\.test.js/$2/}';",
+			"import React from 'react';",
+			"import renderer from 'react-test-renderer';",
+			"import {shallow} from 'enzyme';",
+			"",
+			"describe('${TM_FILENAME/\\..+/$1/} Component', () => {",
+			"const wrapper = shallow(<${TM_FILENAME/\\..+/$1/}/>);",
+			"",
+			"it('renders correctly', () => {",
+			"const component = renderer.create(<${TM_FILENAME/\\..+/$1/}/>).toJSON();",
+			"expect(component).toMatchSnapshot();",
+			"expect(wrapper).toBeDefined();",
+			"});$2",
+			"});"
+		],
+		"description": "Simple snapshot test"
+	},
+}
